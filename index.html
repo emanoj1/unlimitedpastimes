@@ -47,6 +47,15 @@
 
     .card{background:var(--card);border-radius:14px;overflow:hidden;border:1px solid rgba(0,0,0,.08)}
 
+    /* CSS for awards */
+    .award {
+      margin-top: 6px;
+      font-size: 0.85rem;
+      color: #38b6ff; /* highlight with your brand blue */
+      font-weight: 600;
+    }
+
+
     /* Aspect-ratio safe thumb/iframe container */
     .media{position:relative;aspect-ratio:16/9;background:#f5f3f0;cursor:pointer}
     /* Center play icon overlay (hidden after click via --show-play) */
@@ -101,7 +110,8 @@
       {
         id: "vi2a-u1IEj4",
         title: "Ajāmila Calls Nārāyaṇa — A Redemption Story",
-        desc: "From the Bhāgavatam: the moment a fallen man utters the Lord's name and turns the tide of fate."
+        desc: "From the Bhāgavatam: the moment a fallen man utters the Lord's name and turns the tide of fate.",
+        award: "Selected for the AI Film Awards, Venice 2025"
       }
     ];
 
@@ -141,7 +151,7 @@
 
       const body = document.createElement('div');
       body.className = 'card-body';
-      body.innerHTML = `<h3>${v.title}</h3><p class="desc">${v.desc}</p>`;
+      body.innerHTML = `<h3>${v.title}</h3><p class="desc">${v.desc}</p>${v.award ? `<p class="award"><em>${v.award}</em></p>` : ""}`;
 
       card.appendChild(thumbWrap);
       card.appendChild(body);
