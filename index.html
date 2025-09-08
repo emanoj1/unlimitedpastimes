@@ -78,10 +78,12 @@
     .btn{display:inline-block;color:#fff;text-decoration:none;padding:10px 16px;border-radius:8px;font-weight:700;margin:5px}
     .contact-btn{background:#38b6ff} /* Contact Us = brand blue */
     .blog-btn{background:#4e6789}    /* Blog = darker accent */
+    .subscribe-btn{background:var(--brand)} /* Subscribe = your main brand blue */
 
     .subscribe-note{font-size:.9rem;color:var(--muted);margin-top:6px}
     .subscribe-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:.3rem 0 1rem}
     .subscribe-actions .btn{padding:8px 12px}
+
   </style>
 </head>
 <body>
@@ -98,13 +100,13 @@
       <h2>Latest Releases</h2>
       <p class="subscribe-note">Please subscribe to our YouTube channel and click the bell icon so you never miss a new release.</p>
       <div class="subscribe-actions">
-        <a class="btn" href="https://www.youtube.com/@UnlimitedPastimes" target="_blank" rel="noopener">Subscribe on YouTube</a>
+        <a class="btn subscribe-btn" href="https://www.youtube.com/@UnlimitedPastimes" target="_blank" rel="noopener">Subscribe on YouTube</a>
       </div>
       <div id="video-grid" class="grid"></div>
     </section>
 
     <div class="contact">
-      <a class="btn" href="https://tally.so/r/3jVVba" target="_blank" rel="noopener">Contact Us</a>
+      <a class="contact-btn" href="https://tally.so/r/3jVVba" target="_blank" rel="noopener">Contact Us</a>
       <a class="btn blog-btn" href="https://blog.unlimitedpastimes.com/blog/" target="_blank" rel="noopener">Blog</a>
     </div>
   </div>
