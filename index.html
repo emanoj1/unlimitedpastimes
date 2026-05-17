@@ -84,6 +84,50 @@
     .subscribe-actions{display:flex;flex-wrap:wrap;gap:10px;align-items:center;margin:.3rem 0 1rem}
     .subscribe-actions .btn{padding:8px 12px}
 
+    .feature-sections{margin-top:42px;display:grid;gap:24px}
+    .feature-section{
+      background:rgba(255,255,255,.78);
+      border:1px solid rgba(78,103,137,.16);
+      border-radius:14px;
+      overflow:hidden;
+      box-shadow:0 14px 36px rgba(78,103,137,.08);
+    }
+    .feature-inner{display:grid;gap:22px;padding:18px}
+    .feature-copy h2{margin:0 0 10px;color:var(--ink);line-height:1.2}
+    .feature-copy p{margin:0 0 12px;color:#33465f}
+    .feature-copy p:last-child{margin-bottom:0}
+    .feature-copy strong{color:var(--ink)}
+    .feature-image{
+      width:100%;
+      height:100%;
+      min-height:260px;
+      object-fit:cover;
+      display:block;
+      background:#f5f3f0;
+    }
+    .creator-image{object-position:center top}
+    .podcast-image{object-fit:contain;padding:18px;background:linear-gradient(135deg,#ffffff 0%,#e8f6ff 100%)}
+    .podcast-platforms{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px}
+    .platform-btn{padding:8px 12px}
+    .spotify-btn{background:#1db954}
+    .apple-btn{background:#8e44ad}
+    .amazon-btn{background:#00a8b5}
+    .podcast-stats{
+      margin-top:14px;
+      color:var(--ink);
+      font-weight:700;
+      font-size:.95rem;
+    }
+    @media (min-width:780px){
+      .feature-inner{grid-template-columns:minmax(240px,.8fr) minmax(0,1.2fr);align-items:center;padding:0}
+      .feature-copy{padding:28px 30px 28px 4px}
+      .podcast-section .feature-inner{grid-template-columns:minmax(0,1.15fr) minmax(240px,.85fr)}
+      .podcast-section .feature-copy{grid-column:1;grid-row:1;padding:30px 4px 30px 30px}
+      .podcast-section .feature-image-wrap{grid-column:2;grid-row:1}
+      .feature-image{min-height:360px}
+      .podcast-image{min-height:320px}
+    }
+
   </style>
 </head>
 <body>
@@ -108,6 +152,41 @@
     <div class="contact">
       <a class="btn contact-btn" href="https://tally.so/r/3jVVba" target="_blank" rel="noopener">Contact Us</a>
       <a class="btn blog-btn" href="https://unlimitedpastimes.substack.com" target="_blank" rel="noopener">Blog</a>
+    </div>
+
+    <div class="feature-sections">
+      <section class="feature-section creator-section">
+        <div class="feature-inner">
+          <div class="feature-image-wrap">
+            <img class="feature-image creator-image" src="assets/kkd-illustration.png" alt="Illustration of Krishna Kumar Dasa">
+          </div>
+          <div class="feature-copy">
+            <h2>The Creator</h2>
+            <p><strong>Krishna Kumar Dasa</strong> is an ISKCON / Hare Krishna practitioner and the creator behind <strong>Unlimited Pastimes</strong>. Inspired by the timeless wisdom of the Vedic scriptures, the project explores new ways of bringing the pastimes of Lord Krishna and the universe of bhakti to modern audiences.</p>
+            <p>From generative AI films and animation to podcasts, digital media, and online platforms, the aim is to use contemporary tools and storytelling mediums to share spiritual narratives that have inspired seekers for generations.</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="feature-section podcast-section">
+        <div class="feature-inner">
+          <div class="feature-image-wrap">
+            <img class="feature-image podcast-image" src="assets/KC-2min-KKD.png" alt="Krishna Consciousness podcast cover">
+          </div>
+          <div class="feature-copy">
+            <h2>The Creator’s Podcast - <em>Krishna Consciousness</em></h2>
+            <p><strong>Krishna Consciousness</strong> is a short-form spiritual podcast by Krishna Kumar Dasa, featuring 2-minute narrations of the timeless pastimes of Lord Krishna as described in the <em>Krishna Book</em> and <em>Śrīmad-Bhāgavatam</em> by His Divine Grace <strong>A. C. Bhaktivedanta Swami Śrīla Prabhupāda</strong>, Founder-Acharya of the International Society For Krishna Consciousness (ISKCON).</p>
+            <p>Each episode is designed for simple daily listening - offering a gentle glimpse into the beauty, philosophy, wonder, and devotion found within Krishna’s pastimes.</p>
+            <p><strong>Listen on:</strong></p>
+            <div class="podcast-platforms">
+              <a class="btn platform-btn spotify-btn" href="https://open.spotify.com/show/39P4zvcsESkkW0ZLp254nk" target="_blank" rel="noopener">Spotify</a>
+              <a class="btn platform-btn apple-btn" href="https://podcasts.apple.com/us/podcast/krishna-consciousness/id1518489925" target="_blank" rel="noopener">Apple Podcasts</a>
+              <a class="btn platform-btn amazon-btn" href="https://music.amazon.com.au/podcasts/b0877c30-471e-4db1-9bf0-30bd38db5b3d/krishna-consciousness" target="_blank" rel="noopener">Amazon Music</a>
+            </div>
+            <div class="podcast-stats">35,000+ streams &amp; downloads • 1,000+ followers</div>
+          </div>
+        </div>
+      </section>
     </div>
   </div>
 
